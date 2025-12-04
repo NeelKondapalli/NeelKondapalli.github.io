@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Share Tech Mono', monospace;
+  line-height: 1.5;
+  font-weight: 300;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  /* Space opera color palette */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #1a1a2e;
+  --accent-cyan: #00d4ff;
+  --accent-purple: #b400ff;
+  --accent-pink: #ff0080;
+  --text-primary: #e0e0e0;
+  --text-secondary: #c0c0c0;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at top, #1a1a2e 0%, #0a0a0f 50%, #000000 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* Starfield background effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 60% 70%, white, transparent),
+    radial-gradient(1px 1px at 50% 50%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent),
+    radial-gradient(2px 2px at 90% 60%, white, transparent),
+    radial-gradient(1px 1px at 33% 80%, white, transparent),
+    radial-gradient(1px 1px at 15% 95%, white, transparent);
+  background-size:
+    200% 200%,
+    300% 300%,
+    250% 250%,
+    280% 280%,
+    220% 220%,
+    290% 290%,
+    260% 260%;
+  background-position:
+    0% 0%,
+    40% 60%,
+    130% 270%,
+    70% 100%,
+    200% 50%,
+    330% 180%,
+    150% 320%;
+  animation: starfield 200s linear infinite;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes starfield {
+  0%, 100% {
+    background-position:
+      0% 0%,
+      40% 60%,
+      130% 270%,
+      70% 100%,
+      200% 50%,
+      330% 180%,
+      150% 320%;
+  }
+  50% {
+    background-position:
+      100% 100%,
+      140% 160%,
+      230% 370%,
+      170% 200%,
+      300% 150%,
+      430% 280%,
+      250% 420%;
+  }
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-purple);
+}
+
+::selection {
+  background: var(--accent-purple);
+  color: white;
+}

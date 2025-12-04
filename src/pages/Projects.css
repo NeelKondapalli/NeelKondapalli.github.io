@@ -1,0 +1,75 @@
+.projects {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects .content {
+  max-width: 1000px;
+  position: relative;
+  z-index: 2;
+}
+
+.ship-container {
+  position: fixed;
+  top: 20%;
+  pointer-events: none;
+  z-index: 1;
+  transition: left 0.05s linear;
+}
+
+.ascii-ship {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #00d4ff;
+  opacity: 0.2;
+  white-space: pre;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.project-item {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  transition: all 0.2s ease;
+}
+
+.project-item:hover {
+  transform: translateX(8px);
+}
+
+.project-name {
+  color: #00d4ff;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-name:hover {
+  color: #b400ff;
+}
+
+.separator {
+  color: #666;
+  margin: 0 0.5rem;
+}
+
+.project-description {
+  color: #c0c0c0;
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    font-size: 0.9rem;
+  }
+}
