@@ -36,6 +36,11 @@ export function createAsciiPlayerJsonl({
 
   let isFullyLoaded = false;
 
+
+  let fpsFrameCount = 0;
+  let fpsLastTime = 0;
+  let fpsUpdateInterval = 10000; 
+
   // Build glyph cache once (all 256 possible ASCII chars)
   function initGlyphCache() {
     glyphCache = new Array(256);
@@ -242,6 +247,18 @@ export function createAsciiPlayerJsonl({
     if (accumulator >= frameTime) {
       renderFrame();
       accumulator = 0;
+
+      // Track FPS
+      fpsFrameCount++;
+      if (!fpsLastTime) fpsLastTime = now;
+
+      const fpsDelta = now - fpsLastTime;
+      if (fpsDelta >= fpsUpdateInterval) {
+        const actualFps = (fpsFrameCount / fpsDelta * 1000).toFixed(2);
+        console.log(`[AsciiPlayer] Actual FPS: ${actualFps} | Target: ${fps}`);
+        fpsFrameCount = 0;
+        fpsLastTime = now;
+      }
     }
 
     rafId = requestAnimationFrame(tick);
@@ -260,6 +277,10 @@ export function createAsciiPlayerJsonl({
     frameIndex = 0;
     accumulator = 0;
     lastTime = performance.now();
+
+    // Reset FPS tracking
+    fpsFrameCount = 0;
+    fpsLastTime = 0;
 
     running = true;
     rafId = requestAnimationFrame(tick);
