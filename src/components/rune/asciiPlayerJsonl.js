@@ -1,5 +1,6 @@
 // @ts-nocheck
 import pako from 'pako';
+import { logger } from '../../utils/logger.js';
 
 export function createAsciiPlayerJsonl({
   container,
@@ -80,25 +81,25 @@ export function createAsciiPlayerJsonl({
   
           if (encoding === "gzip") {
 
-            console.log("[AsciiPlayer] Browser auto-decompressed gzip");
+            logger.log("[AsciiPlayer] Browser auto-decompressed gzip");
             text = await res.text();
           } else {
 
-            console.log("[AsciiPlayer] Manual gzip decompress");
+            logger.log("[AsciiPlayer] Manual gzip decompress");
             const buf = await res.arrayBuffer();
             const decompressed = pako.ungzip(new Uint8Array(buf));
             text = new TextDecoder().decode(decompressed);
           }
         }
       } catch (fetchError) {
-        console.warn('[AsciiPlayer] Gzip fetch failed:', fetchError.message);
-        console.warn(fetchError);
+        logger.warn('[AsciiPlayer] Gzip fetch failed:', fetchError.message);
+        logger.warn(fetchError);
         res = null;
       }
     }
 
     if (!text) {
-      console.log('[AsciiPlayer] Loading uncompressed...');
+      logger.log('[AsciiPlayer] Loading uncompressed...');
       res = await fetch(`${framesPath}/frames.jsonl`);
       if (!res.ok) {
         throw new Error(`Failed to load frames from ${framesPath}`);
@@ -107,23 +108,23 @@ export function createAsciiPlayerJsonl({
     }
 
     const fetchTime = performance.now() - startTime;
-    console.log(`[AsciiPlayer] Fetch took ${fetchTime.toFixed(0)}ms`);
+    logger.log(`[AsciiPlayer] Fetch took ${fetchTime.toFixed(0)}ms`);
 
 
     const lines = text.trim().split('\n');
     frameCount = lines.length;
 
-   
+
     cellCount = rows * cols;
 
- 
+
     const totalCells = frameCount * cellCount;
     glyphs = new Uint8Array(totalCells);
     hues = new Uint16Array(totalCells);
     saturations = new Uint8Array(totalCells);
     lightness = new Uint8Array(totalCells);
 
-    console.log('[AsciiPlayer] Parsing all frames...');
+    logger.log('[AsciiPlayer] Parsing all frames...');
     const parseStartTime = performance.now();
 
 
@@ -139,25 +140,25 @@ export function createAsciiPlayerJsonl({
     });
 
     const parseTime = performance.now() - parseStartTime;
-    console.log(`[AsciiPlayer] All frames parsed in ${parseTime.toFixed(0)}ms`);
+    logger.log(`[AsciiPlayer] All frames parsed in ${parseTime.toFixed(0)}ms`);
 
     // Pre-compute all color strings
-    console.log('[AsciiPlayer] Pre-computing color strings...');
+    logger.log('[AsciiPlayer] Pre-computing color strings...');
     const colorStartTime = performance.now();
     colorStrings = new Array(totalCells);
     for (let i = 0; i < totalCells; i++) {
       colorStrings[i] = hslToString(hues[i], saturations[i], lightness[i]);
     }
     const colorTime = performance.now() - colorStartTime;
-    console.log(`[AsciiPlayer] Color strings computed in ${colorTime.toFixed(0)}ms`);
+    logger.log(`[AsciiPlayer] Color strings computed in ${colorTime.toFixed(0)}ms`);
 
     // Initialize glyph cache
     initGlyphCache();
 
     const totalBytes = glyphs.byteLength + hues.byteLength +
                        saturations.byteLength + lightness.byteLength;
-    console.log(`[AsciiPlayer] Loaded ${frameCount} frames, ${cellCount} cells/frame`);
-    console.log(`[AsciiPlayer] Memory: ${(totalBytes / 1024 / 1024).toFixed(1)} MB (frame data)`);
+    logger.log(`[AsciiPlayer] Loaded ${frameCount} frames, ${cellCount} cells/frame`);
+    logger.log(`[AsciiPlayer] Memory: ${(totalBytes / 1024 / 1024).toFixed(1)} MB (frame data)`);
 
     return cellCount;
   }
@@ -255,7 +256,7 @@ export function createAsciiPlayerJsonl({
       const fpsDelta = now - fpsLastTime;
       if (fpsDelta >= fpsUpdateInterval) {
         const actualFps = (fpsFrameCount / fpsDelta * 1000).toFixed(2);
-        console.log(`[AsciiPlayer] Actual FPS: ${actualFps} | Target: ${fps}`);
+        logger.log(`[AsciiPlayer] Actual FPS: ${actualFps} | Target: ${fps}`);
         fpsFrameCount = 0;
         fpsLastTime = now;
       }

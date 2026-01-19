@@ -8,7 +8,7 @@ import InvertModeToggle from '../components/InvertModeToggle';
 import './Home.css';
 
 const Home = () => {
-  const [videoInvertMode, setVideoInvertMode] = useState(2);
+  const [videoInvertMode, setVideoInvertMode] = useState(1);
   const projects = [
     {
       name: 'Rune',
@@ -83,11 +83,11 @@ const Home = () => {
   return (
     <div className="home">
       <ThemeToggle />
-      <InvertModeToggle invertMode={videoInvertMode} onToggle={handleInvertModeToggle} />
+      {/* <InvertModeToggle invertMode={videoInvertMode} onToggle={handleInvertModeToggle} /> */}
       <br/>
       <div className="video-container">
         {/* <AsciiVideo framesPath="/horse" /> */}
-        <AsciiVideoJsonl framesPath="/horse_shrinked" preferGzip={true} invertMode={videoInvertMode} />
+        <AsciiVideoJsonl framesPath="/horse_simple" preferGzip={true} invertMode={videoInvertMode} />
       </div>
 
       <div className="content">

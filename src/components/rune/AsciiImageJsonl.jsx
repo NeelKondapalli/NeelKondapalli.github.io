@@ -1,6 +1,7 @@
 import "./ascii-video.css";
 import { useEffect, useRef, useState } from "react";
 import pako from 'pako';
+import { logger } from '../../utils/logger.js';
 
 export default function AsciiImageJsonl({
   framesPath,
@@ -36,39 +37,39 @@ export default function AsciiImageJsonl({
               const encoding = res.headers.get("content-encoding");
 
               if (encoding === "gzip") {
-                console.log("[AsciiImage] Browser auto-decompressed gzip");
+                logger.log("[AsciiImage] Browser auto-decompressed gzip");
                 text = await res.text();
               } else {
-                console.log("[AsciiImage] Manual gzip decompress");
+                logger.log("[AsciiImage] Manual gzip decompress");
                 const buf = await res.arrayBuffer();
                 const decompressed = pako.ungzip(new Uint8Array(buf));
                 text = new TextDecoder().decode(decompressed);
               }
             }
           } catch (fetchError) {
-            console.warn('[AsciiImage] Gzip fetch failed:', fetchError.message);
+            logger.warn('[AsciiImage] Gzip fetch failed:', fetchError.message);
             res = null;
           }
         }
 
         if (!text) {
-          console.log('[AsciiImage] Loading uncompressed...');
+          logger.log('[AsciiImage] Loading uncompressed...');
           res = await fetch(`${framesPath}/frame.jsonl`);
           if (!res.ok) {
-            console.warn(`[AsciiImage] Failed to load frames from ${framesPath}`);
+            logger.warn(`[AsciiImage] Failed to load frames from ${framesPath}`);
             return;
           }
           text = await res.text();
         }
 
         if (!text || text.trim().length === 0) {
-          console.warn(`[AsciiImage] Empty file at ${framesPath}`);
+          logger.warn(`[AsciiImage] Empty file at ${framesPath}`);
           return;
         }
 
         const firstLine = text.trim().split('\n')[0];
         if (!firstLine) {
-          console.warn(`[AsciiImage] No valid frame data in ${framesPath}`);
+          logger.warn(`[AsciiImage] No valid frame data in ${framesPath}`);
           return;
         }
 
@@ -95,7 +96,7 @@ export default function AsciiImageJsonl({
 
         setIsReady(true);
       } catch (error) {
-        console.error('[AsciiImage] Failed to load image:', error);
+        logger.error('[AsciiImage] Failed to load image:', error);
       }
     };
 
