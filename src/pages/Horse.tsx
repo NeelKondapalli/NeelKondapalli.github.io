@@ -17,7 +17,7 @@ const Horse = () => {
       <ThemeToggle />
       <InvertModeToggle invertMode={videoInvertMode} onToggle={handleInvertModeToggle} />
       <div className="video-container">
-        <AsciiVideoJsonl framesPath="/horse_shrinked" preferGzip={true} invertMode={videoInvertMode} />
+        <AsciiVideoJsonl framesPath="/horse_simple" preferGzip={true} invertMode={videoInvertMode} />
       </div>
     </div>
   );
