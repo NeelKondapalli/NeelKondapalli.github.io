@@ -43,7 +43,7 @@ const Home = () => {
       role: 'Incoming Quant Developer Intern',
       url: 'https://point72.com/cubist/',
       asciiPath: '/logos/p72',
-      fontSize: 6,
+      fontSize: 2,
       offsetX: -245,
       invertMode: 2
     },
@@ -52,7 +52,7 @@ const Home = () => {
       role: 'Software Engineer Intern',
       url: 'https://tower-research.com/',
       asciiPath: '/logos/tower',
-      fontSize: 6,
+      fontSize: 2,
       offsetX: -245,
       invertMode: 2
     },
@@ -61,7 +61,7 @@ const Home = () => {
       role: 'Software Engineer Intern',
       url: 'https://skydeck.berkeley.edu/',
       asciiPath: '/logos/skydeck',
-      fontSize: 6,
+      fontSize: 3,
       offsetX: -260,
       invertMode: 2
     },
@@ -70,8 +70,8 @@ const Home = () => {
       role: 'Machine Learning Intern',
       url: 'https://www.tetrascience.com/',
       asciiPath: '/logos/tetra',
-      fontSize: 8.5,
-      offsetX: -245,
+      fontSize: 3,
+      offsetX: -270,
       invertMode: 2
     },
   ];
@@ -102,7 +102,7 @@ const Home = () => {
           <div className="list">
             {experiences.map((exp, index) => (
               <div key={index} className="list-item-with-hover">
-                 {exp.asciiPath && (
+                 {/* {exp.asciiPath && (
                   <div
                     className="ascii-hover-image"
                     style={{
@@ -116,7 +116,7 @@ const Home = () => {
                       invertMode={exp.invertMode || 0}
                     />
                   </div>
-                )}
+                )} */}
                 <div className="list-item">
                   <a className="company" href={exp.url} target="_blank" rel="noopener noreferrer ">
                     <span className="company">{exp.company}</span>
