@@ -3,7 +3,7 @@
     white-space: pre;
     font-family: ui-monospace, monospace;
     line-height: 1.1;
-    font-size: 13px;
+    font-size: 8px;
     will-change: contents;
     transition: opacity 1s ease-in;
   }
@@ -11,13 +11,13 @@
   /* Responsive font sizing for ASCII art */
   @media (max-width: 768px) {
     .ascii-surface {
-      font-size: 10px;
+      font-size: 8px;
     }
   }
 
   @media (max-width: 575px) {
     .ascii-surface {
-      font-size: 7px;
+      font-size: 6px;
     }
   }
 

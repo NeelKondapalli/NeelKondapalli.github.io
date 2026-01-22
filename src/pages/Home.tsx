@@ -91,18 +91,22 @@ const Home = () => {
       </div>
 
       <div className="content">
-        <h1>Hi, I'm Neel</h1>
-        <p className="tagline">
-          I'm an EECS student at Berkeley interested in performant computing, infrastructure, and distributed 
-          systems
-        </p>
 
         <section className="section">
+          <h2>Neel Kondapalli</h2>
+          <div>
+            Hi, I’m Neel! I’m currently studying EECS at <span class = "bold">Berkeley</span>. My interests lie in high-performance computing and efficient distributed systems.<br/><br/>
+            I’m working at <span class = "bold">Cubist Systematic Strategies</span> this summer on the research infrastructure team.<br/><br/>
+            I previously worked at <span class = "bold">Tower Research Capital</span>, where I focused on infrastructure for model evaluation and testing. Before that, I worked on computer vision systems at <span class = "bold">TetraScience</span>.<br/>
+          </div>
+        </section>
+
+        {/* <section className="section">
           <h2>Experience</h2>
           <div className="list">
             {experiences.map((exp, index) => (
               <div key={index} className="list-item-with-hover">
-                 {/* {exp.asciiPath && (
+                 {exp.asciiPath && (
                   <div
                     className="ascii-hover-image"
                     style={{
@@ -116,7 +120,7 @@ const Home = () => {
                       invertMode={exp.invertMode || 0}
                     />
                   </div>
-                )} */}
+                )}
                 <div className="list-item">
                   <a className="company" href={exp.url} target="_blank" rel="noopener noreferrer ">
                     <span className="company">{exp.company}</span>
@@ -126,9 +130,9 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </section>
+        </section>  */}
 
-        <section className="section">
+        {/* <section className="section">
           <h2>Projects</h2>
           <div className="list">
             {projects.map((project, index) => (
@@ -140,7 +144,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         <section className="section socials">
           <a href="mailto:neel_kondapalli@berkeley.edu">Email</a>
