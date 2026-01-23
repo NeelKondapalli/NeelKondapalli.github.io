@@ -96,6 +96,7 @@ const Home = () => {
           <h2>Neel Kondapalli</h2>
           <div>
             Hi, I’m Neel! I’m currently studying EECS at <span class = "bold">Berkeley</span>. My interests lie in high-performance computing and efficient distributed systems.<br/><br/>
+            Currently doing research in <span class = "bold">Sky Computing Lab</span> on GPU inference for RL pipelines, exploring KV cache retention and scheduling strategies to reduce latency and improve throughput.<br/><br/>
             I’m working at <span class = "bold">Cubist Systematic Strategies</span> this summer on the research infrastructure team.<br/><br/>
             I previously worked at <span class = "bold">Tower Research Capital</span>, where I focused on infrastructure for model evaluation and testing. Before that, I worked on computer vision systems at <span class = "bold">TetraScience</span>.<br/>
           </div>
