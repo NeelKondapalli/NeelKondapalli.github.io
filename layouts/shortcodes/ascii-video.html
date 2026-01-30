@@ -1,0 +1,38 @@
+{{ $framesPath := .Get "path" }}
+{{ $preferGzip := default true (.Get "gzip") }}
+{{ $invertMode := default "1" (.Get "invert") }}
+{{ $id := printf "ascii-video-%s" ($framesPath | anchorize) }}
+
+<div class="ascii-video-container">
+    <pre class="ascii-surface{{ if eq $invertMode "1" }} ascii-invert-on-light{{ else if eq $invertMode "2" }} ascii-invert-on-dark{{ end }}" id="{{ $id }}" style="opacity: 0; min-height: 33em; transition: opacity 0.5s ease-in;"></pre>
+</div>
+
+<script type="module">
+    console.log('ASCII video shortcode loading...');
+
+    import { createAsciiPlayerJsonl } from '/js/asciiPlayerJsonl.js';
+
+    const container = document.getElementById('{{ $id }}');
+    console.log('Container found:', container);
+
+    if (container) {
+        console.log('Starting player with path: {{ $framesPath }}');
+        const player = createAsciiPlayerJsonl({
+            container: container,
+            framesPath: '{{ $framesPath }}',
+            preferGzip: {{ $preferGzip }},
+            onReady: () => {
+                console.log('Player ready!');
+                container.style.opacity = '1';
+            }
+        });
+
+        player.start()
+            .then(() => console.log('Player started successfully'))
+            .catch(err => {
+                console.error('Failed to start ASCII player:', err);
+            });
+    } else {
+        console.error('Container not found: {{ $id }}');
+    }
+</script>

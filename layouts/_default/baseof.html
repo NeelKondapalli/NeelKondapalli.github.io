@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+    <!-- <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header> -->
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+
+    {{ block "scripts" . }}{{ end }}
+</body>
+</html>

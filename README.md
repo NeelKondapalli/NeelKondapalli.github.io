@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# Hugo Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website is built with [Hugo](https://gohugo.io/), a fast and flexible static site generator.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Basic Hugo theme with responsive layout
+- Team page for showcasing team members
+- ASCII video player using JSONL format
+- Horse animation demo (`/horse_shrinked`)
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Hugo Extended v0.155.0 or later
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Development
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Start the Hugo development server:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+hugo server -D
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The site will be available at `http://localhost:1313/`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Build the site for production:
+
+```bash
+hugo
 ```
+
+The built site will be in the `public/` directory.
+
+## Project Structure
+
+- `content/` - Markdown content files
+  - `team/` - Team member pages
+- `layouts/` - HTML templates
+  - `_default/` - Default layout templates
+  - `shortcodes/` - Reusable content snippets
+- `static/` - Static assets (CSS, JS, images, videos)
+  - `js/` - JavaScript files including ASCII video player
+  - `horse_shrinked/` - ASCII video frames
+- `hugo.toml` - Hugo configuration
+
+## ASCII Video Player
+
+The ASCII video player is integrated as a Hugo shortcode. Use it in your markdown files:
+
+```
+{{< ascii-video path="/horse_shrinked" >}}
+```
+
+### Shortcode Parameters
+
+- `path` - Path to the frames directory (required)
+- `gzip` - Use gzip compression (default: "true")
+- `invert` - Invert colors mode: 0 (none), 1 (light mode), 2 (dark mode)
