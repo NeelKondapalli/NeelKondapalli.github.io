@@ -1,0 +1,44 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="til-container">
+    <header class="til-header">
+        <h1>{{ .Title }}</h1>
+	<p class="til-description">The mind is unrivaled in reasoning, but weak at storage. I leave here a chronicle of my thoughts, convictions, and ideas.</p>
+    </header>
+
+    <div class="til-content">
+        {{ $pages := .Pages }}
+        {{ $byCategory := dict }}
+
+        {{ range $pages }}
+            {{ $category := "Uncategorized" }}
+            {{ if .Params.categories }}
+                {{ $category = index .Params.categories 0 }}
+            {{ end }}
+            {{ $existing := index $byCategory $category }}
+            {{ if $existing }}
+                {{ $byCategory = merge $byCategory (dict $category (append $existing .)) }}
+            {{ else }}
+                {{ $byCategory = merge $byCategory (dict $category (slice .)) }}
+            {{ end }}
+        {{ end }}
+
+        {{ range $category, $posts := $byCategory }}
+        <section class="til-section">
+            <h2>{{ $category }}</h2>
+            <ul class="til-list">
+                {{ range $posts }}
+                <li>
+                    <a href="{{ .RelPermalink }}">
+                        <span class="til-date">{{ .Date.Format "2006-01-02" }}</span>
+                        <span class="til-title">{{ .Title }}</span>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </section>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

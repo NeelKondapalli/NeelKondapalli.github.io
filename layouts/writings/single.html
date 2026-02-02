@@ -1,0 +1,27 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<article class="blog-post">
+    <header class="blog-header">
+        <h1>{{ .Title }}</h1>
+        <div class="blog-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ if .Params.categories }}
+            <span class="blog-categories">
+                {{ range .Params.categories }}
+                <span class="blog-category">{{ . }}</span>
+                {{ end }}
+            </span>
+            {{ end }}
+        </div>
+    </header>
+
+    <div class="blog-content">
+        {{ .Content }}
+    </div>
+
+    <footer class="blog-footer">
+        <a href="/writings" class="back-link">← Back to Writings</a>
+    </footer>
+</article>
+{{ end }}
