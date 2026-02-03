@@ -9,22 +9,34 @@
 
     <div class="til-content">
         {{ $pages := .Pages }}
-        {{ $byCategory := dict }}
 
         {{ range $pages }}
             {{ $category := "Uncategorized" }}
             {{ if .Params.categories }}
                 {{ $category = index .Params.categories 0 }}
             {{ end }}
-            {{ $existing := index $byCategory $category }}
-            {{ if $existing }}
-                {{ $byCategory = merge $byCategory (dict $category (append $existing .)) }}
-            {{ else }}
-                {{ $byCategory = merge $byCategory (dict $category (slice .)) }}
+            {{ $key := printf "cat_%s" $category }}
+            {{ if not ($.Scratch.Get $key) }}
+                {{ $.Scratch.Set $key slice }}
+            {{ end }}
+            {{ $.Scratch.Add $key . }}
+        {{ end }}
+
+        {{ $categories := slice }}
+        {{ range $pages }}
+            {{ $category := "Uncategorized" }}
+            {{ if .Params.categories }}
+                {{ $category = index .Params.categories 0 }}
+            {{ end }}
+            {{ if not (in $categories $category) }}
+                {{ $categories = $categories | append $category }}
             {{ end }}
         {{ end }}
 
-        {{ range $category, $posts := $byCategory }}
+        {{ range $categories }}
+        {{ $category := . }}
+        {{ $key := printf "cat_%s" $category }}
+        {{ $posts := $.Scratch.Get $key }}
         <section class="til-section">
             <h2>{{ $category }}</h2>
             <ul class="til-list">
