@@ -40,18 +40,18 @@ export function createAsciiPlayerJsonl({
 
   let fpsFrameCount = 0;
   let fpsLastTime = 0;
-  let fpsUpdateInterval = 10000; 
+  let fpsUpdateInterval = 10000;
 
   // Build glyph cache once (all 256 possible ASCII chars)
   function initGlyphCache() {
-    glyphCache = new Array(256);
-    for (let i = 0; i < 256; i++) {
-      glyphCache[i] = String.fromCharCode(i);
+    glyphCache = new Array(65536);
+    for (let i = 0; i < 65536; i++) {
+      glyphCache[i] = String.fromCodePoint(i);
     }
   }
 
   function hslToString(h, s, l) {
-    return `hsl(${h * 360 / 255}, ${s / 255 * 100}%, ${l / 255 * 100}%)`;
+    return `hsl(${h}, ${s}%, ${l}%)`;
   }
 
   async function loadManifest() {
@@ -71,14 +71,14 @@ export function createAsciiPlayerJsonl({
     let text;
     let res;
 
-  
+
     if (preferGzip) {
       try {
         res = await fetch(`${framesPath}/frames.jsonl.gz`);
-  
+
         if (res.ok) {
           const encoding = res.headers.get("content-encoding");
-  
+
           if (encoding === "gzip") {
 
             logger.log("[AsciiPlayer] Browser auto-decompressed gzip");
@@ -119,7 +119,7 @@ export function createAsciiPlayerJsonl({
 
 
     const totalCells = frameCount * cellCount;
-    glyphs = new Uint8Array(totalCells);
+    glyphs = new Uint16Array(totalCells);
     hues = new Uint16Array(totalCells);
     saturations = new Uint8Array(totalCells);
     lightness = new Uint8Array(totalCells);
@@ -132,13 +132,14 @@ export function createAsciiPlayerJsonl({
       const frame = JSON.parse(line);
       frame.cells.forEach((cell, cellIdx) => {
         const idx = frameIdx * cellCount + cellIdx;
-        glyphs[idx] = cell.g.charCodeAt(0);
+        const glyphCode = cell.g.codePointAt(0) || 0;
+        glyphs[idx] = glyphCode;
+
         hues[idx] = cell.h || 0;
         saturations[idx] = cell.s || 0;
         lightness[idx] = cell.l || 0;
       });
     });
-
     const parseTime = performance.now() - parseStartTime;
     logger.log(`[AsciiPlayer] All frames parsed in ${parseTime.toFixed(0)}ms`);
 
@@ -188,8 +189,11 @@ export function createAsciiPlayerJsonl({
         const currIdx = currOffset + i;
         const span = cellSpans[i];
 
-        span.textContent = glyphCache[glyphs[currIdx]];
+        const glyphCode = glyphs[currIdx];
+        const glyphChar = glyphCache[glyphCode];
+        span.textContent = glyphChar;
         span.style.color = colorStrings[currIdx];
+
       }
 
       // Call onReady after first frame is rendered
@@ -215,7 +219,7 @@ export function createAsciiPlayerJsonl({
       const currentGlyph = glyphs[currIdx];
       const previousGlyph = glyphs[prevIdx];
       if (previousGlyph !== currentGlyph) {
-        span.textContent = glyphCache[currentGlyph]; 
+        span.textContent = glyphCache[currentGlyph];
       }
 
       // Check color change (byte comparisons against previous frame)

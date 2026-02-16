@@ -1,6 +1,6 @@
 {{ $framesPath := .Get "path" }}
 {{ $preferGzip := default true (.Get "gzip") }}
-{{ $invertMode := default "1" (.Get "invert") }}
+{{ $invertMode := default "0" (.Get "invert") }}
 {{ $id := printf "ascii-video-%s" ($framesPath | anchorize) }}
 
 <div class="ascii-video-container">

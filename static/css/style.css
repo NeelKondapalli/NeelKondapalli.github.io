@@ -4,7 +4,7 @@
     src: url('/fonts/geist-pixel/GeistPixel-Square.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -12,7 +12,7 @@
     src: url('/fonts/geist-pixel/GeistPixel-Circle.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -20,7 +20,7 @@
     src: url('/fonts/geist-pixel/GeistPixel-Grid.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -28,7 +28,7 @@
     src: url('/fonts/geist-pixel/GeistPixel-Line.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -36,7 +36,7 @@
     src: url('/fonts/geist-pixel/GeistPixel-Triangle.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 * {
@@ -117,7 +117,8 @@ article {
 .home .ascii-video-container {
     display: flex;
     justify-content: center;
-    margin: 10px 0;
+    margin: 11px 0;
+    min-height: 19rem;
 }
 
 .home .ascii-surface {
