@@ -176,10 +176,15 @@ footer {
 @media (max-width: 768px) {
     .ascii-surface {
         font-size: 0.25rem;
+        max-width: 100vw;
+        overflow-x: hidden;
+        transform-origin: top center;
     }
     
     .home .ascii-video-container {
         min-height: 9.5rem;
+        overflow-x: hidden;
+        width: 100%;
     }
 }
 
