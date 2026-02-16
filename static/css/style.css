@@ -173,6 +173,16 @@ footer {
     font-size: 0.5rem;
 }
 
+@media (max-width: 768px) {
+    .ascii-surface {
+        font-size: 0.25rem;
+    }
+    
+    .home .ascii-video-container {
+        min-height: 9.5rem;
+    }
+}
+
 .ascii-invert-on-light {
     filter: invert(1);
 }
