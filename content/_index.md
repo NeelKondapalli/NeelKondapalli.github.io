@@ -4,7 +4,7 @@ title: "Home"
 <br>
 <br>
 
-{{< ascii-video path="/exp" >}}
+{{< ascii-video path="/lh" >}}
 
 ## Hi, I'm Neel!
 
