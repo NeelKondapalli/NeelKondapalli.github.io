@@ -2,7 +2,6 @@
 title: "Home"
 ---
 <br>
-<br>
 
 {{< ascii-video path="/lh" >}}
 
