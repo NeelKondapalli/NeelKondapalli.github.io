@@ -1,8 +1,8 @@
 {
-  "cols": 100,
-  "rows": 38,
+  "cols": 90,
+  "rows": 34,
   "channels": 3,
   "type": "video",
-  "fps": 18,
-  "frame_count": 27
+  "fps": 10,
+  "frame_count": 15
 }

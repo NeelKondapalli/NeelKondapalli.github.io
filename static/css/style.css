@@ -213,13 +213,13 @@ footer {
 }
 
 .til-header {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .til-header h1 {
     font-size: 2.5em;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 4px;
     color: #000;
 }
 
@@ -230,7 +230,7 @@ footer {
 }
 
 .til-content {
-    margin-top: 40px;
+    margin-top: 6px;
 }
 
 .til-section {

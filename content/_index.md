@@ -3,7 +3,7 @@ title: "Home"
 ---
 <br>
 
-{{< ascii-video path="/lh" >}}
+{{< ascii-video path="/lh" maxFps="16">}}
 
 ## Hi, I'm Neel!
 

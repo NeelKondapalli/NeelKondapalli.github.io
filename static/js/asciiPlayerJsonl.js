@@ -7,6 +7,7 @@ export function createAsciiPlayerJsonl({
   framesPath,
   preferGzip = true,
   onReady = null,
+  maxFps = null,
 }) {
   let cellSpans = [];
 
@@ -61,7 +62,16 @@ export function createAsciiPlayerJsonl({
 
     cols = manifest.cols;
     rows = manifest.rows;
-    fps = manifest.fps || 12;
+
+    // Use maxFps if provided, otherwise use manifest fps, default to 12
+    let targetFps = maxFps !== null ? maxFps : (manifest.fps || 12);
+
+    // Cap at 18 fps if target exceeds it
+    fps = targetFps > 18 ? 18 : targetFps;
+
+    if (targetFps > 18) {
+      logger.log(`[AsciiPlayer] Requested FPS ${targetFps} exceeds cap, using ${fps}`);
+    }
 
     return manifest;
   }

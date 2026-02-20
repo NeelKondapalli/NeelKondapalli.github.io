@@ -4,6 +4,7 @@
 {{ $fontSize := .Get "fontSize" }}
 {{ $align := .Get "align" }}
 {{ $height := .Get "height" }}
+{{ $maxFps := .Get "maxFps" }}
 {{ $id := printf "ascii-video-%s" ($framesPath | anchorize) }}
 
 <div class="ascii-video-container"{{ if $align }} style="text-align: {{ $align }};"{{ end }}>
@@ -24,6 +25,7 @@
             container: container,
             framesPath: '{{ $framesPath }}',
             preferGzip: {{ $preferGzip }},
+            {{ if $maxFps }}maxFps: {{ $maxFps }},{{ end }}
             onReady: () => {
                 console.log('Player ready!');
                 container.style.opacity = '1';
