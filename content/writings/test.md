@@ -2,7 +2,7 @@
 title: "Test Blog"
 date: 2026-02-01
 draft: false
-categories: ["¯\\_(ツ)_/¯"]
+categories: [""]
 ---
 
 ## This is a test
@@ -19,4 +19,3 @@ nkk ~~~~~|xx|~~~~~~~~~~~~~|x|~~~ ~~  ~   ~
 
 
 ```
-

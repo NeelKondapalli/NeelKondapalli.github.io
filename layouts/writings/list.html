@@ -4,43 +4,14 @@
 <div class="til-container">
     <header class="til-header">
         <h1>{{ .Title }}</h1>
-	<p class="til-description">I leave here a chronicle of my thoughts, convictions, and ideas.</p>
     </header>
 
     <div class="til-content">
-        {{ $pages := .Pages }}
+        {{ $.Content }}
 
-        {{ range $pages }}
-            {{ $category := "Uncategorized" }}
-            {{ if .Params.categories }}
-                {{ $category = index .Params.categories 0 }}
-            {{ end }}
-            {{ $key := printf "cat_%s" $category }}
-            {{ if not ($.Scratch.Get $key) }}
-                {{ $.Scratch.Set $key slice }}
-            {{ end }}
-            {{ $.Scratch.Add $key . }}
-        {{ end }}
-
-        {{ $categories := slice }}
-        {{ range $pages }}
-            {{ $category := "Uncategorized" }}
-            {{ if .Params.categories }}
-                {{ $category = index .Params.categories 0 }}
-            {{ end }}
-            {{ if not (in $categories $category) }}
-                {{ $categories = $categories | append $category }}
-            {{ end }}
-        {{ end }}
-
-        {{ range $categories }}
-        {{ $category := . }}
-        {{ $key := printf "cat_%s" $category }}
-        {{ $posts := $.Scratch.Get $key }}
         <section class="til-section">
-            <h2>{{ $category }}</h2>
             <ul class="til-list">
-                {{ range $posts }}
+                {{ range .Pages }}
                 <li>
                     <a href="{{ .RelPermalink }}">
                         <span class="til-date">{{ .Date.Format "2006-01-02" }}</span>
@@ -50,7 +21,6 @@
                 {{ end }}
             </ul>
         </section>
-        {{ end }}
     </div>
 </div>
 {{ end }}

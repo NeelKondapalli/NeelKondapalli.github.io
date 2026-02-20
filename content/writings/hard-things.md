@@ -2,7 +2,7 @@
 title: "Prey to Truths"
 date: 2026-02-02
 draft: false
-categories: ["¯\\_(ツ)_/¯"]
+categories: [""]
 ---
 
 ```
@@ -41,4 +41,4 @@ There is no inherent purpose to life, and no pot of gold at the end of the rainb
 >
 > — Albert Camus, *The Myth of Sisyphus*
 
-[^s]: [The Myth of Sisyphus PDF](https://www2.hawaii.edu/~freeman/courses/phil360/16.%20Myth%20of%20Sisyphus.pdf) 
+[^s]: [The Myth of Sisyphus PDF](https://www2.hawaii.edu/~freeman/courses/phil360/16.%20Myth%20of%20Sisyphus.pdf)

@@ -2,4 +2,7 @@
 title: "Writings"
 ---
 
-I leave here a chronicle of my thoughts, convictions, and ideas.
+{{< ascii-video path="/test" fontSize="6px" align="center" height="300px" invertMode="0">}}
+
+<hr>
+<br>
