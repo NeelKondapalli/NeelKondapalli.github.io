@@ -1,7 +1,9 @@
 {{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
 
 {{ define "main" }}
+{{ if not .Params.hideTitle }}
 <h1>{{ .Title }}</h1>
+{{ end }}
 {{ .Content }}
 
 <section class="list">
