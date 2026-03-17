@@ -9,7 +9,7 @@ title: "Home"
 
 I'm currently studying **EECS at Berkeley**. My interests lie in high-performance computing and efficient distributed systems.
 
-I'm currently doing research in **Sky Computing Lab** on GPU inference for RL pipelines, exploring KV cache retention to improve throughput and latency.
+I'm currently doing research in **Sky Computing Lab** on RL efficiency, exploring KV cache retention to improve rollout throughput.
 
 I'm working at **Cubist Systematic Strategies** this summer on their research infrastructure team.
 
