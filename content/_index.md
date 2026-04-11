@@ -11,7 +11,7 @@ I study **EECS at Berkeley**. My interests lie in high-performance computing and
 
 I'm currently doing research at **Sky Computing Lab** on RL efficiency, exploring CPU KV cache retention to improve rollout throughput.
 
-I'm working at **Point72** this summer on Cubist's quantitative research infrastructure.
+I'm building quantitative research systems at **Point72/Cubist** this summer.
 
 I previously worked at **Tower Research Capital**, where I focused on infrastructure for model evaluation and testing. Before that, I worked on computer vision systems at **TetraScience**.
 
