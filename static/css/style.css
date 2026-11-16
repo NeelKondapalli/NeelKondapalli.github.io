@@ -98,7 +98,7 @@ h1 {
 }
 
 h2 {
-    font-family: "Geist Pixel Line";
+    font-family: "Geist Pixel Circle";
     margin: 30px 0 20px;
     font-size: 1.9em;
     font-weight: normal;
@@ -110,8 +110,18 @@ article {
 }
 
 .home {
-    max-width: 800px;
+    max-width: 840px;
     margin: 0 auto;
+}
+
+.home h2 {
+    font-size: 1.6em;
+}
+
+.home > h2,
+.home > p {
+    position: relative;
+    top: -8px;
 }
 
 .home .ascii-video-container {
@@ -128,6 +138,30 @@ article {
 .home p {
     margin: 15px 0;
     line-height: 1.8;
+}
+
+.company-logo {
+    display: inline-block;
+    width: 1.45em;
+    height: 1.4em;
+    aspect-ratio: 1 / 1;
+    margin: 0 0.35em 0 0.20em; /* Space outside: right, then left. */
+    position: relative;
+    top: 1px;                /* Lower the tile without moving surrounding text. */
+    left: 0px;               /* Include units: positive = right, negative = left. */
+    vertical-align: -0.3em;   /* Keep the company name on the normal baseline. */
+    padding: 0.14em;          /* Black margin inside the tile. */
+    border-radius: 0.22em;
+    background: #000;
+    object-fit: contain;
+}
+
+.company-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #000;
+    text-underline-offset: 0.15em;
+    cursor: pointer;
 }
 
 .home .contact-links {

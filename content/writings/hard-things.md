@@ -5,25 +5,6 @@ draft: false
 categories: [""]
 ---
 
-```
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠨⣯⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠂⠀⣤⣾⣿⢟⣥⠷⣪
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠀⠉⢻⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠎⡀⣠⣿⢿⣿⡷⣫⡞⡴⢋
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣎⢻⣿⣿⣿⣧⡀⠀⠀⠀⠀⠀⣠⠎⢀⣽⣴⣿⣿⢋⢧⣹⣿⣇⢣⣫
-⢠⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡆⣼⣾⣿⣾⣿⣿⣿⠀⠀⠀⠀⣴⠁⠀⠚⣯⣾⣿⢫⣼⣿⣭⣿⣯⣶⣼
-⢸⠀⠀⡐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢒⠓⣴⣿⣿⣯⣿⣿⣿⠀⠀⢠⣾⣿⠋⢠⣾⣿⣿⡿⢻⠏⣿⣼⣿⣾⣟⣮
-⢸⡄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⢛⣿⣿⣿⣿⢻⣿⣿⣿⢐⣴⣿⠟⢥⣾⣿⡿⢟⡹⡜⣨⠾⣷⢻⣿⣿⣳⣷
-⠀⢷⠦⠄⠀⠀⠀⠀⠀⠠⠄⡠⠉⣹⢿⣟⣿⣿⢧⣿⣿⣿⣷⣾⡿⠁⣶⣿⠟⡝⢑⣸⠱⣘⢳⣥⣿⣟⣾⣿⣿⣿
-⠀⠈⢿⡄⢠⠀⠀⠀⠀⠤⠄⣁⠠⠯⢚⣾⣯⣿⣿⣿⣿⣿⣿⡿⠀⣾⣿⡿⠃⢠⠸⣄⡹⢴⢫⢺⣏⣿⣿⣿⣿⣿
-⠀⠀⣸⢷⣄⡤⣁⣬⣴⣶⣤⣦⣶⣷⣿⣿⣿⣿⣿⣿⣿⠟⠁⢀⣾⣯⢿⣡⢸⣥⢓⡂⣭⡎⣿⡯⣿⣿⣿⣿⣿⣿
-⠀⣰⡏⢀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⣀⣠⡟⣿⣿⣻⣾⠯⣳⢞⠿⡧⣼⣶⢿⣿⣿⣿⣿⡿⣿
-⢰⣿⣼⣿⡇⠀⣹⡟⠛⠿⢿⣿⣿⠿⢿⣿⣿⣿⣿⠇⣠⢸⣿⣿⣿⣿⣿⣎⣿⣴⢋⣾⣁⡟⣿⣿⡾⠿⣿⣿⣿⣿
-⠠⣿⣿⣿⣤⣼⡿⠀⠀⠀⠀⠀⠀⢀⣿⣟⣿⣿⣿⠛⢿⣿⣿⣿⣿⣿⣿⠿⣠⣿⠟⠿⣿⠀⣇⠼⣃⣿⣿⣿⣿⣿
-⠀⢷⣿⡏⠉⠁⠀⠀⠀⠀⠀⠀⣰⣿⣿⡿⣿⣿⠋⠀⠀⠚⢼⡋⠡⣞⣽⣿⣏⣿⡾⡿⣧⢿⣤⡞⢅⣿⣿⣿⣿⣿
-⠀⣼⣿⣷⣿⣿⡧⠀⠀⠀⢀⠎⣽⡿⠋⠀⣾⡟⠳⠀⢠⠐⣊⢯⣷⣿⣿⣿⣿⣼⣿⣿⣿⣟⣯⣶⣾⣿⣿⣿⣿⣿
-⠀⢸⣿⡟⠉⠘⡇⠀⣀⡴⣃⣾⡟⠡⢂⣎⡴⠠⢣⡹⢙⡐⠉⣯⠿⣿⣿⣿⣿⣿⣿⣿⡷⢿⣿⢯⣿⣿⣿⣻⣽⠟
-
-```
-
 ## Dancing in Space
 
 I've wondered often as to the purpose of life, and what it means to be great. Not to sound nihilistic, but I do believe life, though beautiful, is a grand mistake. We may plant trees, build cities, and touch the stars, but no sooner do we perform these things than, on the cosmic scale, the trees wither, the cities crumble, and the stars die. Why try, then? To answer this, I will first enumerate the story of a king, a hill, and a rock.
