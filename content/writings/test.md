@@ -2,7 +2,6 @@
 title: "Test Blog"
 date: 2026-02-01
 draft: false
-categories: [""]
 ---
 
 ## This is a test

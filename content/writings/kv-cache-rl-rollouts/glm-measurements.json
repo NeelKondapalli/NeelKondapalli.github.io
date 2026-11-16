@@ -1,0 +1,101 @@
+[
+  {
+    "config": "cfg1",
+    "programs": 320,
+    "pool_gb": 600,
+    "source": "glm_run/rerun/01-blog_4_engine_tp2_p40_glm_p40_GLM-4.6V-FP8/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 88.53,
+    "avg_prefix_hit_rate": 0.9066,
+    "cpu_hit_rate": 0.3959
+  },
+  {
+    "config": "cfg2",
+    "programs": 320,
+    "pool_gb": 600,
+    "source": "glm_run/rerun/01-blog_4_engine_tp2_p40_glm_p40_GLM-4.6V-FP8/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 81.09,
+    "avg_prefix_hit_rate": 0.86,
+    "cpu_hit_rate": 0.6534
+  },
+  {
+    "config": "cfg3",
+    "programs": 320,
+    "pool_gb": 600,
+    "source": "glm_run/rerun/01-blog_4_engine_tp2_p40_glm_p40_GLM-4.6V-FP8/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 76.57,
+    "avg_prefix_hit_rate": 0.2442,
+    "cpu_hit_rate": 0
+  },
+  {
+    "config": "cfg6",
+    "programs": 320,
+    "pool_gb": 600,
+    "source": "glm_run/rerun/01-blog_4_engine_tp2_p40_glm_p40_GLM-4.6V-FP8/cfg6_ta_tr_nolmc_http/metrics.json",
+    "steps_per_min": 89.15,
+    "avg_prefix_hit_rate": 0.6379,
+    "cpu_hit_rate": 0
+  },
+  {
+    "config": "cfg1",
+    "programs": 160,
+    "pool_gb": 600,
+    "source": "glm_run/rerun/02-blog_4_engine_tp2_p20_glm_p20_GLM-4.6V-FP8/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 72.67,
+    "avg_prefix_hit_rate": 0.925,
+    "cpu_hit_rate": 0.3848
+  },
+  {
+    "config": "cfg2",
+    "programs": 160,
+    "pool_gb": 600,
+    "source": "glm_run/rerun/02-blog_4_engine_tp2_p20_glm_p20_GLM-4.6V-FP8/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 65.77,
+    "avg_prefix_hit_rate": 0.8749,
+    "cpu_hit_rate": 0.6198
+  },
+  {
+    "config": "cfg3",
+    "programs": 160,
+    "pool_gb": 600,
+    "source": "glm_run/rerun/02-blog_4_engine_tp2_p20_glm_p20_GLM-4.6V-FP8/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 61.62,
+    "avg_prefix_hit_rate": 0.2973,
+    "cpu_hit_rate": 0
+  },
+  {
+    "config": "cfg1",
+    "programs": 80,
+    "pool_gb": 600,
+    "source": "glm_run/rerun/03-blog_4_engine_tp2_p10_glm_p10_GLM-4.6V-FP8/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 49.96,
+    "avg_prefix_hit_rate": 0.9369,
+    "cpu_hit_rate": 0.2987
+  },
+  {
+    "config": "cfg2",
+    "programs": 80,
+    "pool_gb": 600,
+    "source": "glm_run/rerun/03-blog_4_engine_tp2_p10_glm_p10_GLM-4.6V-FP8/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 52.43,
+    "avg_prefix_hit_rate": 0.9068,
+    "cpu_hit_rate": 0.4099
+  },
+  {
+    "config": "cfg3",
+    "programs": 80,
+    "pool_gb": 600,
+    "source": "glm_run/rerun/03-blog_4_engine_tp2_p10_glm_p10_GLM-4.6V-FP8/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 49.02,
+    "avg_prefix_hit_rate": 0.6171,
+    "cpu_hit_rate": 0
+  },
+  {
+    "config": "cfg6",
+    "programs": 80,
+    "pool_gb": 600,
+    "source": "glm_run/rerun/03-blog_4_engine_tp2_p10_glm_p10_GLM-4.6V-FP8/cfg6_ta_tr_nolmc_http/metrics.json",
+    "steps_per_min": 48.2,
+    "avg_prefix_hit_rate": 0.7593,
+    "cpu_hit_rate": 0
+  }
+]

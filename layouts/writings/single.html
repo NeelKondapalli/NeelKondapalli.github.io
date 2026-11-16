@@ -1,20 +1,20 @@
 {{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
 
 {{ define "main" }}
-<article class="blog-post">
+<article class="blog-post{{ if .Params.toc }} has-toc{{ end }}">
     <header class="blog-header">
         <h1>{{ .Title }}</h1>
         <div class="blog-meta">
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-            {{ if .Params.categories }}
-            <span class="blog-categories">
-                {{ range .Params.categories }}
-                <span class="blog-category">{{ . }}</span>
-                {{ end }}
-            </span>
-            {{ end }}
         </div>
     </header>
+
+    {{ if .Params.toc }}
+    <aside class="post-toc" aria-label="Contents">
+        <div class="post-toc-title">Contents</div>
+        {{ .TableOfContents }}
+    </aside>
+    {{ end }}
 
     <div class="blog-content">
         {{ .Content }}
@@ -24,4 +24,33 @@
         <a href="/writings" class="back-link">← Back to Writings</a>
     </footer>
 </article>
+{{ end }}
+
+{{ define "scripts" }}
+{{ if .Params.toc }}
+<script>
+    const sectionLinks = [...document.querySelectorAll('.post-toc a')];
+    const sections = sectionLinks.map(link => document.getElementById(decodeURIComponent(link.hash.slice(1))));
+    let scheduled = false;
+    function updateContents() {
+        let current = -1;
+        sections.forEach((section, index) => {
+            if (section && section.getBoundingClientRect().top <= 170) current = index;
+        });
+        sectionLinks.forEach((link, index) => {
+            if (index === current) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+        scheduled = false;
+    }
+    window.addEventListener('scroll', () => {
+        if (!scheduled) {
+            scheduled = true;
+            requestAnimationFrame(updateContents);
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateContents);
+    updateContents();
+</script>
+{{ end }}
 {{ end }}

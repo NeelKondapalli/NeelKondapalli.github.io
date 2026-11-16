@@ -2,7 +2,7 @@
 title: "Prey to Truths"
 date: 2026-02-02
 draft: false
-categories: [""]
+toc: true
 ---
 
 ## Dancing in Space

@@ -35,6 +35,13 @@ hugo
 
 The built site will be in the `public/` directory.
 
+### Writing Contents Navigation
+
+Add `toc: true` to a writing's front matter to enable the shared margin contents
+navigation, smooth section scrolling, and active-section indicator. It uses the
+post's `##` headings and hides on narrow screens to preserve the reading column.
+New posts created with `hugo new content writings/post-name.md` enable it by default.
+
 ## Project Structure
 
 - `content/` - Markdown content files
