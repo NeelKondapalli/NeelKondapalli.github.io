@@ -418,6 +418,12 @@ footer {
     margin-bottom: 20px;
 }
 
+.blog-content strong,
+.blog-content b {
+    font-weight: 700;
+    -webkit-text-stroke: 0.2px currentColor;
+}
+
 .blog-content pre { max-width: 100%; overflow-x: auto; }
 
 .blog-content ul, .blog-content ol {
