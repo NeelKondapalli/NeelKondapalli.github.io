@@ -445,9 +445,8 @@ footer {
     text-decoration: underline;
 }
 
-/* Technical articles keep the site's monochrome header and use readable body type. */
+/* Keep technical article content within the reading column. */
 .blog-post:has(.blog-content table) .blog-content {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 16px;
     line-height: 1.8;
     color: #222;
