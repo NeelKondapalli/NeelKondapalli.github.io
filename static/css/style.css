@@ -1,0 +1,467 @@
+/* Geist Pixel Font Faces */
+@font-face {
+    font-family: 'Geist Pixel';
+    src: url('/fonts/geist-pixel/GeistPixel-Square.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Geist Pixel Circle';
+    src: url('/fonts/geist-pixel/GeistPixel-Circle.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Geist Pixel Grid';
+    src: url('/fonts/geist-pixel/GeistPixel-Grid.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Geist Pixel Line';
+    src: url('/fonts/geist-pixel/GeistPixel-Line.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Geist Pixel Triangle';
+    src: url('/fonts/geist-pixel/GeistPixel-Triangle.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: #000;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #000;
+    color: #fff;
+}
+
+body {
+    font-family: "Geist Pixel Circle", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* font-feature-settings: "ss01"; */
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 2px;
+}
+
+.main-nav {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3px 20px;
+}
+
+.main-nav a {
+    margin-right: 25px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.05em;
+    transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover {
+    opacity: 0.6;
+}
+
+main {
+    min-height: 60vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: "Geist Pixel Circle";
+    margin: 30px 0 20px;
+    font-size: 1.9em;
+    font-weight: normal;
+    color: #000000;
+}
+
+article {
+    margin-bottom: 30px;
+}
+
+.home {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.home h2 {
+    font-size: 1.6em;
+}
+
+.home > h2,
+.home > p {
+    position: relative;
+    top: -8px;
+}
+
+.home .ascii-video-container {
+    display: flex;
+    justify-content: center;
+    min-height: 19rem;
+}
+
+.home .ascii-surface {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.home p {
+    margin: 15px 0;
+    line-height: 1.8;
+}
+
+.company-logo {
+    display: inline-block;
+    width: 1.45em;
+    height: 1.4em;
+    aspect-ratio: 1 / 1;
+    margin: 0 0.35em 0 0.20em; /* Space outside: right, then left. */
+    position: relative;
+    top: 1px;                /* Lower the tile without moving surrounding text. */
+    left: 0px;               /* Include units: positive = right, negative = left. */
+    vertical-align: -0.3em;   /* Keep the company name on the normal baseline. */
+    padding: 0.14em;          /* Black margin inside the tile. */
+    border-radius: 0.22em;
+    background: #000;
+    object-fit: contain;
+}
+
+.company-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #000;
+    text-underline-offset: 0.15em;
+    cursor: pointer;
+}
+
+.home .contact-links {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.home .contact-links a {
+    color: #000;
+    text-decoration: underline;
+    margin: 0 5px;
+}
+
+.home .contact-links a:hover {
+    opacity: 0.7;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    text-align: center;
+    color: #666;
+}
+
+.list article {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* ASCII Video Styles */
+.ascii-surface {
+    font-family: monospace;
+    white-space: pre;
+    line-height: 1;
+    background: transparent;
+    color: #fff;
+    padding: 0;
+    overflow: visible;
+    margin: 0;
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .ascii-surface {
+        font-size: 0.25rem;
+        max-width: 100vw;
+        overflow-x: hidden;
+        transform-origin: top center;
+    }
+
+    .home .ascii-video-container {
+        min-height: 9.5rem;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    .home br:first-of-type {
+        display: none;
+    }
+}
+
+.ascii-invert-on-light {
+    filter: invert(1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .ascii-invert-on-dark {
+        filter: invert(1);
+    }
+}
+
+/* TIL / Writings Page Styles */
+.til-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.til-header {
+    margin-bottom: 10px;
+}
+
+.til-header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #000;
+}
+
+.til-description {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.til-content {
+    margin-top: 6px;
+}
+
+.til-section {
+    margin-bottom: 50px;
+}
+
+.til-section h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #000;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.til-list {
+    list-style: none;
+    padding: 0;
+}
+
+.til-list li {
+    margin-bottom: 25px;
+    padding-left: 0;
+}
+
+.til-list a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.til-list a:hover {
+    text-decoration: none;
+}
+
+.til-list a:hover .til-title {
+    text-decoration: underline;
+}
+
+.til-date {
+    display: inline-block;
+    font-size: 0.9em;
+    color: #999;
+    font-family: monospace;
+    margin-right: 15px;
+}
+
+.til-title {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #000;
+}
+
+.til-excerpt {
+    margin-top: 8px;
+    margin-left: 0;
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Blog Post Styles */
+@media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+}
+
+#configurations { scroll-margin-top: 150px; }
+
+.blog-content h2, .blog-content h3 { scroll-margin-top: 150px; }
+.post-toc { display: none; }
+.post-toc-title { font-size: 14px; color: #666; margin-bottom: 8px; }
+.post-toc ul { list-style: none; padding: 0; margin: 0; }
+.post-toc li { margin: 5px 0; }
+.post-toc a { color: #111; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+.post-toc ul ul { display: none; }
+.post-toc a { display: block; text-decoration: none; line-height: 1.5; padding: 4px 0 4px 12px; border-left: 2px solid transparent; }
+.post-toc a:hover { text-decoration: underline; }
+.post-toc a[aria-current="location"] { border-left-color: #111; font-weight: 700; }
+
+@media (min-width: 900px) {
+    .blog-post.has-toc {
+        --reading-width: min(800px, calc(100vw - 360px));
+        width: var(--reading-width);
+        max-width: 800px;
+    }
+    .has-toc .post-toc {
+        display: block;
+        position: fixed;
+        left: max(12px, calc((100vw - var(--reading-width)) / 2 - 184px));
+        top: 160px;
+        width: 150px;
+        max-height: calc(100vh - 180px);
+        overflow-y: auto;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+}
+
+
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+.blog-header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.blog-meta {
+    font-size: 0.95em;
+    color: #666;
+}
+
+.blog-meta time {
+    font-family: monospace;
+    margin-right: 15px;
+}
+
+.blog-content {
+    line-height: 1.8;
+    color: #333;
+}
+
+.blog-content h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #000;
+}
+
+.blog-content h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    color: #000;
+}
+
+.blog-content p {
+    margin-bottom: 20px;
+}
+
+.blog-content pre { max-width: 100%; overflow-x: auto; }
+
+.blog-content ul, .blog-content ol {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.blog-content li {
+    margin-bottom: 10px;
+}
+
+.blog-footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.back-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Technical articles keep the site's monochrome header and use readable body type. */
+.blog-post:has(.blog-content table) .blog-content {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #222;
+    overflow-wrap: break-word;
+}
+.blog-content img { display: block; max-width: 100%; height: auto; margin: 28px auto; }
+.blog-content table { display: block; width: max-content; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 24px auto; font-size: 14px; }
+.blog-content th, .blog-content td { padding: 10px 12px; border-bottom: 1px solid #ddd; white-space: nowrap; }
+.blog-content th { border-bottom: 1px solid #111; }
+.blog-content a { color: #111; text-decoration: underline; text-decoration-color: #111; text-underline-offset: 3px; }
+.blog-content code { font-size: .9em; overflow-wrap: anywhere; }
+.blog-content em { color: #555; }
+@media (max-width: 600px) {
+    .blog-post { padding: 20px 0; }
+    .blog-header h1 { font-size: 30px; line-height: 1.25; }
+    .blog-content h2 { font-size: 24px; line-height: 1.35; }
+}

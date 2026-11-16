@@ -1,0 +1,16 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+{{ if not .Params.hideTitle }}
+<h1>{{ .Title }}</h1>
+{{ end }}
+{{ .Content }}
+
+<section class="list">
+    {{ range .Pages }}
+    <article>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    </article>
+    {{ end }}
+</section>
+{{ end }}

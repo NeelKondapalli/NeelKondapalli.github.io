@@ -1,0 +1,10 @@
+baseURL = 'https://neelkon.com/'
+languageCode = 'en-us'
+title = 'Neel Kondapalli'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

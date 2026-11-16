@@ -1,0 +1,26 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="til-container">
+    <!--<header class="til-header">
+        <h1>{{ .Title }}</h1>
+    </header>-->
+
+    <div class="til-content">
+        {{ $.Content }}
+
+        <section class="til-section">
+            <ul class="til-list">
+                {{ range .RegularPages.ByDate.Reverse }}
+                <li>
+                    <a href="{{ .RelPermalink }}">
+                        <span class="til-date">{{ .Date.Format "2006-01-02" }}</span>
+                        <span class="til-title">{{ .Title }}</span>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </section>
+    </div>
+</div>
+{{ end }}

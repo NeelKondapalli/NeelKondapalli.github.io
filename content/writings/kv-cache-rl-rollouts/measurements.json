@@ -1,0 +1,353 @@
+[
+  {
+    "config": "cfg1",
+    "programs": 8,
+    "source": "qwen_run/q14rerun_last2/data/p1/p1_cfg_1_2_3_6/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 20.83,
+    "gpu_hit_rate": 0.9511,
+    "cpu_hit_rate": 0.0039,
+    "avg_prefix_hit_rate": 0.9549
+  },
+  {
+    "config": "cfg2",
+    "programs": 8,
+    "source": "qwen_run/q14rerun_last2/data/p1/p1_cfg_1_2_3_6/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 20.42,
+    "gpu_hit_rate": 0.941,
+    "cpu_hit_rate": 0.0048,
+    "avg_prefix_hit_rate": 0.9459
+  },
+  {
+    "config": "cfg3",
+    "programs": 8,
+    "source": "qwen_run/q14rerun_last2/data/p1/p1_cfg_1_2_3_6/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 11.91,
+    "gpu_hit_rate": 0.9098,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.9098
+  },
+  {
+    "config": "cfg6",
+    "programs": 8,
+    "source": "qwen_run/q14rerun_last2/data/p1/p1_cfg_1_2_3_6/cfg6_ta_tr_nolmc_http/metrics.json",
+    "steps_per_min": 16.36,
+    "gpu_hit_rate": 0.9322,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.9322
+  },
+  {
+    "config": "cfg1",
+    "programs": 80,
+    "source": "qwen_run/q14rerun_last2/data/p10/p10_cfg_1_2/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 110.12,
+    "gpu_hit_rate": 0.7429,
+    "cpu_hit_rate": 0.2099,
+    "avg_prefix_hit_rate": 0.9528
+  },
+  {
+    "config": "cfg2",
+    "programs": 80,
+    "source": "qwen_run/q14rerun_last2/data/p10/p10_cfg_1_2/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 105.1,
+    "gpu_hit_rate": 0.5183,
+    "cpu_hit_rate": 0.399,
+    "avg_prefix_hit_rate": 0.9173
+  },
+  {
+    "config": "cfg3",
+    "programs": 80,
+    "source": "qwen_run/q14rerun_last2/data/p10/p10_cfg_3/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 63.6,
+    "gpu_hit_rate": 0.55,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.55
+  },
+  {
+    "config": "cfg1",
+    "programs": 120,
+    "source": "qwen_run/q14rerun_last2/data/p15/p15_cfg_1_2/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 105.28,
+    "gpu_hit_rate": 0.6254,
+    "cpu_hit_rate": 0.3178,
+    "avg_prefix_hit_rate": 0.9432
+  },
+  {
+    "config": "cfg2",
+    "programs": 120,
+    "source": "qwen_run/q14rerun_last2/data/p15/p15_cfg_1_2/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 103.37,
+    "gpu_hit_rate": 0.3468,
+    "cpu_hit_rate": 0.5379,
+    "avg_prefix_hit_rate": 0.8847
+  },
+  {
+    "config": "cfg3",
+    "programs": 120,
+    "source": "qwen_run/q14rerun_last2/data/p15/p15_cfg_3_6/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 80.48,
+    "gpu_hit_rate": 0.3783,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.3783
+  },
+  {
+    "config": "cfg6",
+    "programs": 120,
+    "source": "qwen_run/q14rerun_last2/data/p15/p15_cfg_3_6/cfg6_ta_tr_nolmc_http/metrics.json",
+    "steps_per_min": 94.87,
+    "gpu_hit_rate": 0.785,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.785
+  },
+  {
+    "config": "cfg1",
+    "programs": 16,
+    "source": "qwen_run/q14rerun_last2/data/p2/p2_cfg_1_2_3_6/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 52.52,
+    "gpu_hit_rate": 0.9541,
+    "cpu_hit_rate": 0.003,
+    "avg_prefix_hit_rate": 0.9571
+  },
+  {
+    "config": "cfg2",
+    "programs": 16,
+    "source": "qwen_run/q14rerun_last2/data/p2/p2_cfg_1_2_3_6/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 54.0,
+    "gpu_hit_rate": 0.9591,
+    "cpu_hit_rate": 0.0028,
+    "avg_prefix_hit_rate": 0.9619
+  },
+  {
+    "config": "cfg3",
+    "programs": 16,
+    "source": "qwen_run/q14rerun_last2/data/p2/p2_cfg_1_2_3_6/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 37.16,
+    "gpu_hit_rate": 0.9446,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.9446
+  },
+  {
+    "config": "cfg6",
+    "programs": 16,
+    "source": "qwen_run/q14rerun_last2/data/p2/p2_cfg_1_2_3_6/cfg6_ta_tr_nolmc_http/metrics.json",
+    "steps_per_min": 43.34,
+    "gpu_hit_rate": 0.9479,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.9479
+  },
+  {
+    "config": "cfg1",
+    "programs": 160,
+    "source": "qwen_run/q14rerun_last2/data/p20/p20_cfg_1_2/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 110.7,
+    "gpu_hit_rate": 0.5953,
+    "cpu_hit_rate": 0.3471,
+    "avg_prefix_hit_rate": 0.9424
+  },
+  {
+    "config": "cfg2",
+    "programs": 160,
+    "source": "qwen_run/q14rerun_last2/data/p20/p20_cfg_1_2/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 100.11,
+    "gpu_hit_rate": 0.3096,
+    "cpu_hit_rate": 0.5717,
+    "avg_prefix_hit_rate": 0.8813
+  },
+  {
+    "config": "cfg1",
+    "programs": 200,
+    "source": "qwen_run/q14rerun_last2/data/p25/p25_cfg_1_2/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 87.91,
+    "gpu_hit_rate": 0.5818,
+    "cpu_hit_rate": 0.3562,
+    "avg_prefix_hit_rate": 0.9379
+  },
+  {
+    "config": "cfg2",
+    "programs": 200,
+    "source": "qwen_run/q14rerun_last2/data/p25/p25_cfg_1_2/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 110.45,
+    "gpu_hit_rate": 0.3003,
+    "cpu_hit_rate": 0.5734,
+    "avg_prefix_hit_rate": 0.8738
+  },
+  {
+    "config": "cfg3",
+    "programs": 200,
+    "source": "qwen_run/q14rerun_last2/data/p25/p25_cfg_3_6/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 50.52,
+    "gpu_hit_rate": 0.3322,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.3322
+  },
+  {
+    "config": "cfg6",
+    "programs": 200,
+    "source": "qwen_run/q14rerun_last2/data/p25/p25_cfg_3_6/cfg6_ta_tr_nolmc_http/metrics.json",
+    "steps_per_min": 84.0,
+    "gpu_hit_rate": 0.6571,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.6571
+  },
+  {
+    "config": "cfg1",
+    "programs": 240,
+    "source": "qwen_run/q14rerun_last2/data/p30/p30_cfg_1_2/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 120.78,
+    "gpu_hit_rate": 0.5528,
+    "cpu_hit_rate": 0.3789,
+    "avg_prefix_hit_rate": 0.9317
+  },
+  {
+    "config": "cfg2",
+    "programs": 240,
+    "source": "qwen_run/q14rerun_last2/data/p30/p30_cfg_1_2/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 116.57,
+    "gpu_hit_rate": 0.2903,
+    "cpu_hit_rate": 0.5841,
+    "avg_prefix_hit_rate": 0.8744
+  },
+  {
+    "config": "cfg3",
+    "programs": 240,
+    "source": "qwen_run/q14rerun_last2/data/p30/p30_cfg_3_6/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 71.23,
+    "gpu_hit_rate": 0.3208,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.3208
+  },
+  {
+    "config": "cfg6",
+    "programs": 240,
+    "source": "qwen_run/q14rerun_last2/data/p30/p30_cfg_3_6/cfg6_ta_tr_nolmc_http/metrics.json",
+    "steps_per_min": 95.9,
+    "gpu_hit_rate": 0.6733,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.6733
+  },
+  {
+    "config": "cfg1",
+    "programs": 32,
+    "source": "qwen_run/q14rerun_last2/data/p4/p4_cfg_1_2_3_6/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 51.59,
+    "gpu_hit_rate": 0.9386,
+    "cpu_hit_rate": 0.004,
+    "avg_prefix_hit_rate": 0.9426
+  },
+  {
+    "config": "cfg2",
+    "programs": 32,
+    "source": "qwen_run/q14rerun_last2/data/p4/p4_cfg_1_2_3_6/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 56.05,
+    "gpu_hit_rate": 0.9432,
+    "cpu_hit_rate": 0.0045,
+    "avg_prefix_hit_rate": 0.9476
+  },
+  {
+    "config": "cfg3",
+    "programs": 32,
+    "source": "qwen_run/q14rerun_last2/data/p4/p4_cfg_1_2_3_6/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 55.63,
+    "gpu_hit_rate": 0.9351,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.9351
+  },
+  {
+    "config": "cfg6",
+    "programs": 32,
+    "source": "qwen_run/q14rerun_last2/data/p4/p4_cfg_1_2_3_6/cfg6_ta_tr_nolmc_http/metrics.json",
+    "steps_per_min": 56.32,
+    "gpu_hit_rate": 0.945,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.945
+  },
+  {
+    "config": "cfg1",
+    "programs": 320,
+    "source": "qwen_run/q14rerun_last2/data/p40/00-blog_2_q14_engine_p40_2_eng_mp_p40_Qwen3-14B/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 92.07,
+    "gpu_hit_rate": 0.5304,
+    "cpu_hit_rate": 0.3997,
+    "avg_prefix_hit_rate": 0.9301
+  },
+  {
+    "config": "cfg2",
+    "programs": 320,
+    "source": "qwen_run/q14rerun_last2/data/p40/00-blog_2_q14_engine_p40_2_eng_mp_p40_Qwen3-14B/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 110.09,
+    "gpu_hit_rate": 0.2712,
+    "cpu_hit_rate": 0.5979,
+    "avg_prefix_hit_rate": 0.8691
+  },
+  {
+    "config": "cfg3",
+    "programs": 320,
+    "source": "qwen_run/q14rerun_last2/data/p40/00-blog_2_q14_engine_p40_2_eng_mp_p40_Qwen3-14B/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 69.64,
+    "gpu_hit_rate": 0.3076,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.3076
+  },
+  {
+    "config": "cfg6",
+    "programs": 320,
+    "source": "qwen_run/q14rerun_last2/data/p40/00-blog_2_q14_engine_p40_2_eng_mp_p40_Qwen3-14B/cfg6_ta_tr_nolmc_http/metrics.json",
+    "steps_per_min": 95.5,
+    "gpu_hit_rate": 0.652,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.652
+  },
+  {
+    "config": "cfg1",
+    "programs": 40,
+    "source": "qwen_run/q14rerun_last2/data/p5/p5_cfg_1_2_3_6/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 81.04,
+    "gpu_hit_rate": 0.9502,
+    "cpu_hit_rate": 0.0032,
+    "avg_prefix_hit_rate": 0.9534
+  },
+  {
+    "config": "cfg2",
+    "programs": 40,
+    "source": "qwen_run/q14rerun_last2/data/p5/p5_cfg_1_2_3_6/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 64.32,
+    "gpu_hit_rate": 0.9485,
+    "cpu_hit_rate": 0.0051,
+    "avg_prefix_hit_rate": 0.9536
+  },
+  {
+    "config": "cfg3",
+    "programs": 40,
+    "source": "qwen_run/q14rerun_last2/data/p5/p5_cfg_1_2_3_6/cfg3_nota_nolmc_http/metrics.json",
+    "steps_per_min": 66.0,
+    "gpu_hit_rate": 0.9479,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.9479
+  },
+  {
+    "config": "cfg6",
+    "programs": 40,
+    "source": "qwen_run/q14rerun_last2/data/p5/p5_cfg_1_2_3_6/cfg6_ta_tr_nolmc_http/metrics.json",
+    "steps_per_min": 81.0,
+    "gpu_hit_rate": 0.9496,
+    "cpu_hit_rate": 0,
+    "avg_prefix_hit_rate": 0.9496
+  },
+  {
+    "config": "cfg1",
+    "programs": 64,
+    "source": "qwen_run/q14rerun_last2/data/p8/p8_cfg_1_2/cfg1_ta_tr_lmc_lru_http/metrics.json",
+    "steps_per_min": 95.43,
+    "gpu_hit_rate": 0.7911,
+    "cpu_hit_rate": 0.1632,
+    "avg_prefix_hit_rate": 0.9542
+  },
+  {
+    "config": "cfg2",
+    "programs": 64,
+    "source": "qwen_run/q14rerun_last2/data/p8/p8_cfg_1_2/cfg2_nota_lmc_lru_http/metrics.json",
+    "steps_per_min": 83.37,
+    "gpu_hit_rate": 0.6773,
+    "cpu_hit_rate": 0.2533,
+    "avg_prefix_hit_rate": 0.9307
+  }
+]

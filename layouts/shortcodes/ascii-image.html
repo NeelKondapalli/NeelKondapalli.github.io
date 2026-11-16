@@ -1,0 +1,64 @@
+{{ $framesPath := .Get "path" }}
+{{ $preferGzip := default true (.Get "gzip") }}
+{{ $invertMode := default "0" (.Get "invert") }}
+{{ $fontSize := .Get "fontSize" }}
+{{ $align := .Get "align" }}
+{{ $height := .Get "height" }}
+{{ $id := printf "ascii-image-%s" ($framesPath | anchorize) }}
+
+<style>
+#{{ $id }} {
+    {{ if $fontSize }}
+    --base-font-size: {{ $fontSize }};
+    font-size: var(--base-font-size);
+    {{ end }}
+}
+
+@media (max-width: 768px) {
+    #{{ $id }} {
+        font-size: calc(var(--base-font-size) * 0.8);
+        max-width: 100vw;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #{{ $id }} {
+        font-size: calc(var(--base-font-size) * 0.6);
+    }
+}
+</style>
+
+<div class="ascii-image-container"{{ if $align }} style="text-align: {{ $align }};"{{ end }}>
+    <pre class="ascii-surface{{ if eq $invertMode "1" }} ascii-invert-on-light{{ else if eq $invertMode "2" }} ascii-invert-on-dark{{ end }}" id="{{ $id }}" style="opacity: 0; {{ if $height }}height: {{ $height }};{{ end }} transition: opacity 0.5s ease-in;{{ if $align }} display: inline-block; text-align: left;{{ end }} overflow: hidden; width: fit-content;"></pre>
+</div>
+
+<script type="module">
+    console.log('ASCII image shortcode loading...');
+
+    import { createImageJsonl } from '/js/ImageJsonl.js';
+
+    const container = document.getElementById('{{ $id }}');
+    console.log('Container found:', container);
+
+    if (container) {
+        console.log('Loading image with path: {{ $framesPath }}');
+        const image = createImageJsonl({
+            container: container,
+            framesPath: '{{ $framesPath }}',
+            preferGzip: {{ $preferGzip }},
+            onReady: () => {
+                console.log('Image ready!');
+                container.style.opacity = '1';
+            }
+        });
+
+        image.load()
+            .then(() => console.log('Image loaded successfully'))
+            .catch(err => {
+                console.error('Failed to load ASCII image:', err);
+            });
+    } else {
+        console.error('Container not found: {{ $id }}');
+    }
+</script>
