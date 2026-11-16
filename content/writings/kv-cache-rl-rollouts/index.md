@@ -1,6 +1,6 @@
 ---
 title: "Stayin' Alive: KV Cache Reuse in Agentic Reinforcement Learning"
-date: 2026-09-15
+date: 2026-10-15
 draft: false
 technical: true
 toc: true
