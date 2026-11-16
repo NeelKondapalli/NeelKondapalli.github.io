@@ -67,7 +67,7 @@ ThunderAgent alone improves GPU reuse substantially: at this setting, the mean G
 
 The incremental gain over LMCache only is much smaller: **3.6%**. These measurements support a benefit from offload under growing memory pressure; they do not establish that adding ThunderAgent always improves an offloaded system.
 
-## Scheduling and Offload Symbiosis
+## Scheduling and offload symbiosis
 
 ![Qwen mean cache hit rate per successfully scheduled request across concurrency settings.](cache-hit.png)
 
