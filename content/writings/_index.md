@@ -6,3 +6,7 @@ title: "Writings"
 
 <hr>
 <br>
+
+Shower thoughts
+
+<br>

@@ -328,6 +328,44 @@ footer {
 }
 
 /* Blog Post Styles */
+@media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+}
+
+#configurations { scroll-margin-top: 150px; }
+
+.blog-content h2, .blog-content h3 { scroll-margin-top: 150px; }
+.post-toc { display: none; }
+.post-toc-title { font-size: 14px; color: #666; margin-bottom: 8px; }
+.post-toc ul { list-style: none; padding: 0; margin: 0; }
+.post-toc li { margin: 5px 0; }
+.post-toc a { color: #111; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+.post-toc ul ul { display: none; }
+.post-toc a { display: block; text-decoration: none; line-height: 1.5; padding: 4px 0 4px 12px; border-left: 2px solid transparent; }
+.post-toc a:hover { text-decoration: underline; }
+.post-toc a[aria-current="location"] { border-left-color: #111; font-weight: 700; }
+
+@media (min-width: 900px) {
+    .blog-post.has-toc {
+        --reading-width: min(800px, calc(100vw - 360px));
+        width: var(--reading-width);
+        max-width: 800px;
+    }
+    .has-toc .post-toc {
+        display: block;
+        position: fixed;
+        left: max(12px, calc((100vw - var(--reading-width)) / 2 - 184px));
+        top: 160px;
+        width: 150px;
+        max-height: calc(100vh - 180px);
+        overflow-y: auto;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+}
+
+
 .blog-post {
     max-width: 800px;
     margin: 0 auto;
@@ -357,19 +395,6 @@ footer {
     margin-right: 15px;
 }
 
-.blog-categories {
-    display: inline-block;
-}
-
-.blog-category {
-    display: inline-block;
-    padding: 4px 10px;
-    background: #f0f0f0;
-    border-radius: 3px;
-    font-size: 0.9em;
-    margin-right: 5px;
-}
-
 .blog-content {
     line-height: 1.8;
     color: #333;
@@ -392,6 +417,8 @@ footer {
 .blog-content p {
     margin-bottom: 20px;
 }
+
+.blog-content pre { max-width: 100%; overflow-x: auto; }
 
 .blog-content ul, .blog-content ol {
     margin: 20px 0;
@@ -416,4 +443,25 @@ footer {
 
 .back-link:hover {
     text-decoration: underline;
+}
+
+/* Technical articles keep the site's monochrome header and use readable body type. */
+.blog-post:has(.blog-content table) .blog-content {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #222;
+    overflow-wrap: break-word;
+}
+.blog-content img { display: block; max-width: 100%; height: auto; margin: 28px auto; }
+.blog-content table { display: block; width: max-content; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 24px auto; font-size: 14px; }
+.blog-content th, .blog-content td { padding: 10px 12px; border-bottom: 1px solid #ddd; white-space: nowrap; }
+.blog-content th { border-bottom: 1px solid #111; }
+.blog-content a { color: #111; text-decoration: underline; text-decoration-color: #111; text-underline-offset: 3px; }
+.blog-content code { font-size: .9em; overflow-wrap: anywhere; }
+.blog-content em { color: #555; }
+@media (max-width: 600px) {
+    .blog-post { padding: 20px 0; }
+    .blog-header h1 { font-size: 30px; line-height: 1.25; }
+    .blog-content h2 { font-size: 24px; line-height: 1.35; }
 }
