@@ -79,11 +79,9 @@ The Qwen logs show pauses, resumes, and a substantial CPU hit contribution. At 2
 
 Studying a smaller model relative to available GPU memory lets us examine how growing rollout contexts create cache pressure even when model weights leave substantial room for KV. To see how that regime changes with a larger model used for agentic tasks, we also tested GLM-4.6V-FP8. Its KV layout and memory footprint, together with the different parallelism configuration, change both the available cache capacity and the tradeoff between loading KV and recomputing it.
 
-We also measured GLM-4.6V-FP8 with four engines at TP=2, using eight H100 80 GB GPUs.
-
 ![GLM-4.6V-FP8 serving throughput across available concurrency settings.](glm-throughput.png)
 
-*GLM-4.6V-FP8 throughput versus configured concurrent rollouts. At 320 concurrent rollouts, ThunderAgent with and without LMCache reaches similar throughput, both ahead of the vLLM baseline. [Configuration key](#configurations).*
+*GLM-4.6V-FP8 throughput versus configured concurrent rollouts. Four engines at TP=2, using eight H100 80 GB GPUs. At 320 concurrent rollouts, ThunderAgent with and without LMCache reaches similar throughput, both ahead of the vLLM baseline. [Configuration key](#configurations).*
 
 At 320 configured concurrent rollouts:
 
